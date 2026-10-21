@@ -1,0 +1,11 @@
+{
+  "name": "@clearcare/domain",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pure rules: record commands and status history, due dates, result flags, red flags, computed facts, and every AI prompt, schema, and validator. No platform imports.",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

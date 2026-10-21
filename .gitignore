@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+*.local
+.DS_Store
+
+# Mom's health record, its backups, and every AI run. Never commit these.
+data/*
+!data/README.md
+
+# The compiled document reader
+apps/server/native/.build/

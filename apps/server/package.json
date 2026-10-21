@@ -1,0 +1,11 @@
+{
+  "name": "@clearcare/server",
+  "private": true,
+  "type": "module",
+  "description": "Local API: stores the record in one JSON file, applies commands through the domain rules, and runs the AI jobs.",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "@clearcare/domain": "*",
+    "openai": "^7.39.0"
+  }
+}
