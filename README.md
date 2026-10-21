@@ -146,6 +146,7 @@ checks.
 - The record leaves the Mac only when someone asks the AI something. Then the JSON packet goes to the chosen engine.
   Uploads are read into text on the Mac, and the files themselves are never sent.
 - `data/` is git-ignored. Tests, screenshots and the sample patient are fictional.
+- For patients who connect a patient portal: [terms of use](TERMS.md) and [privacy policy](PRIVACY.md).
 
 ---
 

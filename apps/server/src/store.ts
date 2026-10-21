@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { chmod, copyFile, mkdir, readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { emptyState, type HealthState, type LocalDateTime } from "@clearcare/domain";
@@ -21,6 +21,8 @@ export class Store {
 
   static async open(dataDir: string, now: LocalDateTime): Promise<Store> {
     await mkdir(dataDir, { recursive: true, mode: 0o700 });
+    // A folder made before ClearCare (such as the repo's data/) keeps its old mode unless it is set again.
+    await chmod(dataDir, 0o700);
     const file = path.join(dataDir, "health.json");
     const backups = path.join(dataDir, "backups");
     let state = emptyState(now);
